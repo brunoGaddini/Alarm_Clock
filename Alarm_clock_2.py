@@ -58,3 +58,5 @@ l_imagem = Label(frame_body, height=100, image=imagem, compound=LEFT, padx=10, a
 l_imagem.place(x=10, y=10)
 
 window.mainloop()
+
+## Second Video 08:50
