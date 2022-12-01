@@ -30,7 +30,7 @@ window.resizable(width=False, height=False)
 frame_logo = Frame(window, width=400, height=10, background=cr2)
 frame_logo.grid(row=0, column=0, pady=1, padx=0)
 
-frame_body = Frame(window, width=400, height=290, background=cr3)
+frame_body = Frame(window, width=400, height=290, background=cr1)
 frame_body.grid(row=1, column=0, pady=1, padx=0)
 
 ## Configuring the logo frame
@@ -45,11 +45,11 @@ l_line.place(x=0, y=0)
 
 ## Configuring the image frame
 
-imagem = Image.open(r'C:\Users\Bruno\Desktop\Python\Depertador\icon2.png')
+imagem = Image.open(r'C:\Users\Bruno\Desktop\Python\Depertador\icon1.png')
 imagem = imagem.resize((100, 100))
 imagem = ImageTk.PhotoImage(imagem)
 
-l_imagem = Label(frame_body, height=100, image=imagem, compound=LEFT, padx=10, anchor=NW, font=('Ivy 16 bold'), background=cr1,fg=cr3) ## fg = letter color
+l_imagem = Label(frame_body, height=100, image=imagem, compound=LEFT, padx=10, anchor=NW, font=('Ivy 16 bold'), background=cr1, fg=cr3) ## fg = letter color
 l_imagem.place(x=10, y=10)
 
 window.mainloop()
