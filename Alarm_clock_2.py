@@ -43,13 +43,13 @@ l_line.place(x=0, y=0)
 l_line = Label(frame_logo, height=1, background=cr2, anchor=NW, font=('Ivy 1'))
 l_line.place(x=0, y=0)
 
-## Image
+## Configuring the image frame
 
-imagem = Image.open(r'C:\Users\Bruno\Desktop\Python\Depertador\icon1.png')
+imagem = Image.open(r'C:\Users\Bruno\Desktop\Python\Depertador\icon2.png')
 imagem = imagem.resize((100, 100))
 imagem = ImageTk.PhotoImage(imagem)
 
-imagem = Label(frame_body, height=100, image=imagem, compound=LEFT, padx=10, anchor=NW, font=('Ivy 16 bold'), background=cr1,fg=cr3) ## fg = letter color
-imagem.place(x=10, y=10)
+l_imagem = Label(frame_body, height=100, image=imagem, compound=LEFT, padx=10, anchor=NW, font=('Ivy 16 bold'), background=cr1,fg=cr3) ## fg = letter color
+l_imagem.place(x=10, y=10)
 
 window.mainloop()
