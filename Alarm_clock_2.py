@@ -45,8 +45,8 @@ l_line.place(x=0, y=0)
 
 ## Image
 
-imagem = Image.open('icon1.png')
-imagem = imagem.resize(100, 100)
+imagem = Image.open(r'C:\Users\Bruno\Desktop\Python\Depertador\icon1.png')
+imagem = imagem.resize((100, 100))
 imagem = ImageTk.PhotoImage(imagem)
 
 imagem = Label(frame_body, height=100, image=imagem, compound=LEFT, padx=10, anchor=NW, font=('Ivy 16 bold'), background=cr1,fg=cr3) ## fg = letter color
