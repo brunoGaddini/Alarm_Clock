@@ -52,4 +52,9 @@ imagem = ImageTk.PhotoImage(imagem)
 l_imagem = Label(frame_body, height=100, image=imagem, compound=LEFT, padx=10, anchor=NW, font=('Ivy 16 bold'), background=cr1, fg=cr3) ## fg = letter color
 l_imagem.place(x=10, y=10)
 
+## Configuring the name frame
+
+l_imagem = Label(frame_body, height=100, image=imagem, compound=LEFT, padx=10, anchor=NW, font=('Ivy 16 bold'), background=cr1, fg=cr3) ## fg = letter color
+l_imagem.place(x=10, y=10)
+
 window.mainloop()
