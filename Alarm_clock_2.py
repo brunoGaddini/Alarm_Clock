@@ -60,11 +60,40 @@ l_imagem.place(x=10, y=10)
 # Configuring the text frame
 
 l_text = Label(frame_body, text='Alarme', height=1, anchor=NE, font=('Ivy 10 bold'), background=cr1, fg=cr4)  # fg = text color
-l_text.place(x=100, y=10)
+l_text.place(x=127, y=10)
 
 # Creating the combobox
+
+# Hours
+l_hours = Label(frame_body, text='Hours', height=1, anchor=NW, font=('arial 7'), background=cr1, fg=cr4)  # fg = text color
+l_hours.place(x=127, y=40)
 c_hour = Combobox(frame_body, width=2, font=('Ivy 15'))
 c_hour['value'] = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
 c_hour.current(0) # setting index order
+c_hour.place(x=130, y=58)
+
+# Minutes
+l_minutes = Label(frame_body, text='Minutes', height=1, anchor=NW, font=('arial 7'), background=cr1, fg=cr4)  # fg = text color
+l_minutes.place(x=177, y=40)
+c_minutes = Combobox(frame_body, width=2, font=('Ivy 15'))
+c_minutes['value'] = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+c_minutes.current(0) # setting index order
+c_minutes.place(x=130, y=58)
+
+# Seconds
+l_seconds = Label(frame_body, text='Seconds', height=1, anchor=NW, font=('arial 7'), background=cr1, fg=cr4)  # fg = text color
+l_seconds.place(x=227, y=40)
+c_seconds = Combobox(frame_body, width=2, font=('Ivy 15'))
+c_seconds['value'] = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+c_seconds.current(0) # setting index order
+c_seconds.place(x=130, y=58)
+
+# Period
+l_period = Label(frame_body, text='Period', height=1, anchor=NW, font=('arial 7'), background=cr1, fg=cr4)  # fg = text color
+l_period.place(x=277, y=40)
+c_period = Combobox(frame_body, width=2, font=('Ivy 15'))
+c_period['value'] = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+c_period.current(0) # setting index order
+c_period.place(x=130, y=58)
 
 window.mainloop()
