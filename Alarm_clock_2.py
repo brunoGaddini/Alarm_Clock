@@ -104,4 +104,4 @@ radio.place(x=125, y=95)
 
 window.mainloop()
 
-#https://www.youtube.com/watch?v=tHwIoAk1Hrk 3:39
+#https://www.youtube.com/watch?v=tHwIoAk1Hrk 3:38
