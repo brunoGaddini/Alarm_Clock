@@ -45,7 +45,7 @@ l_line.place(x=0, y=0)
 
 # Configuring the image frame
 
-imagem = Image.open(r'C:\Users\brunogaddini.intern\Desktop\PYTHON\Projeto_Despertador\icon1.png')
+imagem = Image.open(r'C:\Users\Bruno\Desktop\Python\Depertador\icon1.png')
 imagem = imagem.resize((100, 100))
 imagem = ImageTk.PhotoImage(imagem)
 
@@ -60,8 +60,11 @@ l_imagem.place(x=10, y=10)
 # Configuring the text frame
 
 l_text = Label(frame_body, text='Alarme', height=1, anchor=NE, font=('Ivy 10 bold'), background=cr1, fg=cr4)  # fg = text color
-l_text.place(x=10, y=10)
+l_text.place(x=100, y=10)
+
+# Creating the combobox
+c_hour = Combobox(frame_body, width=2, font=('Ivy 15'))
+c_hour['value'] = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+c_hour.current(0) # setting index order
 
 window.mainloop()
-
-# 8:50
