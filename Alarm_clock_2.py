@@ -91,9 +91,13 @@ c_seconds.place(x=230, y=58)
 # Period
 l_period = Label(frame_body, text='Period', height=1, anchor=NW, font=('arial 7'), background=cr1, fg=cr4)  # fg = text color
 l_period.place(x=277, y=40)
-c_period = Combobox(frame_body, width=2, font=('Ivy 15'))
+c_period = Combobox(frame_body, width=3, font=('Ivy 15'))
 c_period['value'] = ("AM", "PM")
 c_period.current(0) # setting index order
 c_period.place(x=280, y=58)
+
+
+# Creating the activate button
+
 
 window.mainloop()
