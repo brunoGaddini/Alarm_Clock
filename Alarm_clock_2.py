@@ -76,24 +76,24 @@ c_hour.place(x=130, y=58)
 l_minutes = Label(frame_body, text='Minutes', height=1, anchor=NW, font=('arial 7'), background=cr1, fg=cr4)  # fg = text color
 l_minutes.place(x=177, y=40)
 c_minutes = Combobox(frame_body, width=2, font=('Ivy 15'))
-c_minutes['value'] = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+c_minutes['value'] = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59")
 c_minutes.current(0) # setting index order
-c_minutes.place(x=130, y=58)
+c_minutes.place(x=180, y=58)
 
 # Seconds
 l_seconds = Label(frame_body, text='Seconds', height=1, anchor=NW, font=('arial 7'), background=cr1, fg=cr4)  # fg = text color
 l_seconds.place(x=227, y=40)
 c_seconds = Combobox(frame_body, width=2, font=('Ivy 15'))
-c_seconds['value'] = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+c_seconds['value'] = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59")
 c_seconds.current(0) # setting index order
-c_seconds.place(x=130, y=58)
+c_seconds.place(x=230, y=58)
 
 # Period
 l_period = Label(frame_body, text='Period', height=1, anchor=NW, font=('arial 7'), background=cr1, fg=cr4)  # fg = text color
 l_period.place(x=277, y=40)
 c_period = Combobox(frame_body, width=2, font=('Ivy 15'))
-c_period['value'] = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+c_period['value'] = ("AM", "PM")
 c_period.current(0) # setting index order
-c_period.place(x=130, y=58)
+c_period.place(x=280, y=58)
 
 window.mainloop()
