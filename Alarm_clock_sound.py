@@ -4,6 +4,7 @@ from pygame import mixer
 from datetime import datetime
 from time import sleep
 from tkinter import *
+from threading import Thread #allows multiple functions to work at the same time
 
 #cr1 = "#feffff"  # White
 
@@ -14,7 +15,7 @@ window.geometry('350x150')
 window.resizable(width=False, height=False)
 
 def ring_alarm():
-    mixer.init()  # Initializing the mixer
+    #mixer.init()  # Initializing the mixer
     mixer.music.load('sound1.mp3')
     mixer.music.play()
 
@@ -41,5 +42,11 @@ def alarm():
                             print("Time to take a break")
                             ring_alarm()
         sleep(1)
+
+# Creating the thread
+# Allows multiple functions to work at the same time
+
+t1 = Thread(target=alarm)
+t1.start()
 
 window.mainloop()
