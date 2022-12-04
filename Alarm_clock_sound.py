@@ -22,10 +22,10 @@ def ring_alarm():
 def alarm():
     while True:
         control = 1
-        c_hour = "00"
-        c_minutes = "30"
+        c_hour = "07"
+        c_minutes = "13"
         c_seconds = "00"
-        c_period = "am".upper()
+        c_period = "PM".upper()
 
         current_time = datetime.now()
 
@@ -34,7 +34,7 @@ def alarm():
         second = current_time.strftime("%S")
         period = current_time.strftime("%p")
 
-        if str(control) ==(1):
+        if control==1:
             if c_period == period:
                 if c_hour == hour:
                     if c_minutes == minut:
@@ -47,6 +47,8 @@ def alarm():
 # Allows multiple functions to work at the same time
 
 t1 = Thread(target=alarm)
+
 t1.start()
+mixer.init()
 
 window.mainloop()
