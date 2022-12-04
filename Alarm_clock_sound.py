@@ -9,8 +9,9 @@ window.geometry('350x150')
 #window.configure(background=cr1)
 window.resizable(width=False, height=False)
 
-mixer.init() # Initializing the mixer
-mixer.music.load('sound1.mp3')
-mixer.music.play()
+def play_alarm():
+    mixer.init()  # Initializing the mixer
+    mixer.music.load('sound1.mp3')
+    mixer.music.play()
 
 window.mainloop()
