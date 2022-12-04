@@ -1,6 +1,7 @@
 # Import Libraries
 import tkinter
 import PIL
+import pygame
 
 from tkinter.ttk import *
 from tkinter import *
@@ -98,9 +99,18 @@ c_period.place(x=280, y=58)
 
 
 # Creating the activate button
+
+#function to indicate selected button
+def get_value():
+    print(activate.get())
+
 activate = IntVar()
-radio = Radiobutton(frame_body, text="Activate", value=1, variable=activate, font=('arial 8 bold'), background=cr1, fg=cr4)
+radio = Radiobutton(frame_body, command=get_value,text="Activate", value=1, variable=activate, font=('arial 8 bold'), background=cr1, fg=cr4)
 radio.place(x=125, y=95)
+
+# Inserting alarm clock sound
+
+
 
 window.mainloop()
 
