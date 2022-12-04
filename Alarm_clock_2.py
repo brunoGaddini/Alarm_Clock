@@ -2,10 +2,17 @@
 import tkinter
 import PIL
 import pygame
+import matplotlib
 
 from tkinter.ttk import *
 from tkinter import *
+
 from PIL import Image, ImageTk
+
+from matplotlib import image
+from matplotlib.pyplot import text
+
+from pygame import mixer
 
 # Color Pallete
 
