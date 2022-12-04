@@ -1,3 +1,5 @@
 from pygame import mixer
 
-mixer.music.load()
+mixer.init # Initializing the mixer
+mixer.music.load('sound1.mp3')
+mixer.music.play()
