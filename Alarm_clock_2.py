@@ -128,6 +128,7 @@ def deactivate_alarm():
         print('Alarm Off: ', activate.get())
         mixer.music.stop()
 
+# Activate bottom
 activate = IntVar()
 radio = Radiobutton(frame_body, command=activate_alarm,text="Activate", value=1, variable=activate, font=('arial 8 bold'), background=cr1, fg=cr4)
 radio.place(x=125, y=95)
@@ -137,6 +138,10 @@ def ring_alarm():
     #mixer.init()  # Initializing the mixer
     mixer.music.load('sound1.mp3')
     mixer.music.play()
+    activate.set(0)
+
+    radio = Radiobutton(frame_body, command=deactivate_alarm, text="Activate", value=1, variable=activate, font=('arial 8 bold'), background=cr1, fg=cr4)
+    radio.place(x=187, y=95)
 
 def alarm():
     while True:
