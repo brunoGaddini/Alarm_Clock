@@ -143,10 +143,10 @@ def alarm():
         period = current_time.strftime("%p")
 
         if control==1:
-            if c_period == period:
-                if c_hour == hour:
-                    if c_minutes == minut:
-                        if c_seconds == second:
+            if p_period == period:
+                if h_hour == hour:
+                    if m_minutes == minut:
+                        if s_seconds == second:
                             print("Time to take a break")
                             ring_alarm()
         sleep(1)
