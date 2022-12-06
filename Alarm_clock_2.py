@@ -129,11 +129,12 @@ def ring_alarm():
 def alarm():
     while True:
         control = 1
-        c_hour = "07"
-        c_minutes = "13"
-        c_seconds = "00"
-        c_period = "PM".upper()
+        h_hour = c_hour.get()
+        m_minutes = c_minutes.get()
+        s_seconds = c_seconds.getint()
+        p_period = c_period.get()
 
+# Getting the current time
         current_time = datetime.now()
 
         hour = current_time.strftime("%I")
