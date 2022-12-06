@@ -140,16 +140,16 @@ def ring_alarm():
     mixer.music.play()
     activate.set(0)
 
-    radio = Radiobutton(frame_body, command=deactivate_alarm, text="Activate", value=1, variable=activate, font=('arial 8 bold'), background=cr1, fg=cr4)
-    radio.place(x=187, y=95)
+    radio = Radiobutton(frame_body, command=deactivate_alarm, text="Deactivate", value=1, variable=activate, font=('arial 8 bold'), background=cr1, fg=cr4)
+    radio.place(x=197, y=95)
 
 def alarm():
     while True:
         control = activate.get()
         h_hour = c_hour.get()
         m_minutes = c_minutes.get()
-        s_seconds = c_seconds.getint()
-        p_period = c_period.upper()
+        s_seconds = c_seconds.get()
+        p_period = c_period.get().upper()
 
 # Getting the current time
         current_time = datetime.now()
@@ -166,6 +166,7 @@ def alarm():
                         if s_seconds == second:
                             print("Time to take a break")
                             ring_alarm()
+                            activate_alarm()
         sleep(1)
 
 # Creating the thread
@@ -176,5 +177,3 @@ t1.start()
 mixer.init()
 
 window.mainloop()
-
-#https://www.youtube.com/watch?v=j4aqAS3100I
