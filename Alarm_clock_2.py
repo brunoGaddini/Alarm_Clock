@@ -3,6 +3,7 @@ import tkinter
 import PIL
 import pygame
 import matplotlib
+import time
 
 from tkinter.ttk import *
 from tkinter import *
@@ -109,7 +110,6 @@ c_period['value'] = ("AM", "PM")
 c_period.current(0) # setting index order
 c_period.place(x=280, y=58)
 
-
 # Creating the activate button
 
 #function to indicate selected button
@@ -121,7 +121,6 @@ radio = Radiobutton(frame_body, command=get_value,text="Activate", value=1, vari
 radio.place(x=125, y=95)
 
 # Inserting alarm clock sound
-
 def ring_alarm():
     #mixer.init()  # Initializing the mixer
     mixer.music.load('sound1.mp3')
@@ -150,6 +149,13 @@ def alarm():
                             print("Time to take a break")
                             ring_alarm()
         sleep(1)
+
+# Creating the thread
+# Allows multiple functions to work at the same time
+t1 = Thread(target=alarm)
+
+t1.start()
+mixer.init()
 
 window.mainloop()
 
