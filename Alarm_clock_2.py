@@ -124,15 +124,9 @@ def activate_alarm():
         t1.start()
 
 # Function to deactivate the alarm
-def activate_alarm():
+def deactivate_alarm():
     if activate.get() ==1:
-        print('Activate: ', activate.get())
-    else:
-        # Creating the thread
-        # Allows multiple functions to work at the same time
-        t1 = Thread(target=alarm)
-        # Start thread
-        t1.start()
+    print('Alarm Off: ', activate.get())
 
 activate = IntVar()
 radio = Radiobutton(frame_body, command=activate_alarm,text="Activate", value=1, variable=activate, font=('arial 8 bold'), background=cr1, fg=cr4)
