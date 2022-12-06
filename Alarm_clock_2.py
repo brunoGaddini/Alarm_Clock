@@ -112,12 +112,30 @@ c_period.place(x=280, y=58)
 
 # Creating the activate button
 
-#function to indicate selected button
-def get_value():
-    print(activate.get())
+#function to indicate selected button activate alarm
+def activate_alarm():
+    if activate.get() ==1:
+        print('Activate: ', activate.get())
+    else:
+        # Creating the thread
+        # Allows multiple functions to work at the same time
+        t1 = Thread(target=alarm)
+        # Start thread
+        t1.start()
+
+# Function to deactivate the alarm
+def activate_alarm():
+    if activate.get() ==1:
+        print('Activate: ', activate.get())
+    else:
+        # Creating the thread
+        # Allows multiple functions to work at the same time
+        t1 = Thread(target=alarm)
+        # Start thread
+        t1.start()
 
 activate = IntVar()
-radio = Radiobutton(frame_body, command=get_value,text="Activate", value=1, variable=activate, font=('arial 8 bold'), background=cr1, fg=cr4)
+radio = Radiobutton(frame_body, command=activate_alarm,text="Activate", value=1, variable=activate, font=('arial 8 bold'), background=cr1, fg=cr4)
 radio.place(x=125, y=95)
 
 # Inserting alarm clock sound
@@ -128,11 +146,11 @@ def ring_alarm():
 
 def alarm():
     while True:
-        control = 1
+        control = activate.get()
         h_hour = c_hour.get()
         m_minutes = c_minutes.get()
         s_seconds = c_seconds.getint()
-        p_period = c_period.get()
+        p_period = c_period.upper()
 
 # Getting the current time
         current_time = datetime.now()
