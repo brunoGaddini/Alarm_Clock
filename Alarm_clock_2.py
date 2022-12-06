@@ -111,7 +111,6 @@ c_period.current(0) # setting index order
 c_period.place(x=280, y=58)
 
 # Creating the activate button
-
 #function to indicate selected button activate alarm
 def activate_alarm():
     if activate.get() ==1:
@@ -126,7 +125,8 @@ def activate_alarm():
 # Function to deactivate the alarm
 def deactivate_alarm():
     if activate.get() ==1:
-    print('Alarm Off: ', activate.get())
+        print('Alarm Off: ', activate.get())
+        mixer.music.stop()
 
 activate = IntVar()
 radio = Radiobutton(frame_body, command=activate_alarm,text="Activate", value=1, variable=activate, font=('arial 8 bold'), background=cr1, fg=cr4)
